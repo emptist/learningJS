@@ -3,4 +3,5 @@ temp
 *.swp~
 test/*.txt
 !test/master.txt
-
+*rebase*
+*histo*.*
