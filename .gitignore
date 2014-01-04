@@ -1,0 +1,6 @@
+.DS_*
+temp
+*.swp~
+test/*.txt
+!test/master.txt
+
