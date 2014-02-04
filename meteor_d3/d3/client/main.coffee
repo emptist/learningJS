@@ -14,11 +14,8 @@ Meteor.startup ->
 
 ###
   
-data = if share.Data?
-    share.Data?.findOne().data
-  else
-      [20,30,40]
-
+data = share.Data?.findOne().data
+  
 
 
 Template.chart.rendered = ->
