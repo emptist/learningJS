@@ -1,0 +1,21 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "three.js": {},
+      "tquery": {}
+    },
+    "packages": {
+      "three.js": {
+        "git": "https://github.com/nozpheratu/three-meteor",
+        "tag": "v0.0.1",
+        "commit": "a437d4e0314b055b19cfc60fa9e1ddfac844a0d9"
+      },
+      "tquery": {
+        "git": "https://github.com/ithkuil/meteor-tquery.git",
+        "tag": "v0.0.2",
+        "commit": "218f26f35f1f97dde727a442efa228bedfcdb477"
+      }
+    }
+  }
+}
