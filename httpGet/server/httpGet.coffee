@@ -1,10 +1,14 @@
 #  	Meteor.startup ->{}
 	
 Meteor.methods
-	openSession:(url) ->
-		fut = -> new Future()
-		getInfo: (url)->
+	openSession:(url='http://hq.sinajs.cn/list=sh600663') ->
+		console.log 'server', url#, r
+		#fut = -> new Future()
+		getInfo = (url)->
 			Meteor.http.get url, (err, res)->
-				fut.ret res
-			fut.wait() 
+				#r = fut.ret res
+				r = res
+				console.log 'server', url, r
+				r
+		#	fut.wait() 
 	 	
