@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "tquery": {}
+    },
+    "packages": {
+      "tquery": {
+        "git": "https://github.com/ithkuil/meteor-tquery.git",
+        "tag": "v0.0.2",
+        "commit": "218f26f35f1f97dde727a442efa228bedfcdb477"
+      }
+    }
+  }
+}
