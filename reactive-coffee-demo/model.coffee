@@ -1,1 +1,1 @@
-@TaskDB = new Meteor.Collection 'tasks'
+#@TaskDB = new Meteor.Collection 'tasks'
