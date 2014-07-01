@@ -3,7 +3,8 @@
   "dependencies": {
     "basePackages": {
       "moment": {},
-      "reactive-coffee": {}
+      "reactive-coffee": {},
+      "bootstrap-3": {}
     },
     "packages": {
       "moment": {
@@ -15,6 +16,11 @@
         "git": "https://github.com/zhouzhuojie/meteor-reactive-coffee.git",
         "tag": "v0.0.5",
         "commit": "e9381176dca17e6766ed888d1709231fcf733d39"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v3.2.0-1",
+        "commit": "17a63902fc6cf1096c5289d963c66cf28b474727"
       }
     }
   }

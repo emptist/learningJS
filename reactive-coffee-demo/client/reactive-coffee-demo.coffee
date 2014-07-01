@@ -1,4 +1,6 @@
+Meteor.subscribe "tasks"
 Meteor.startup ->
+
   bind = rx.bind
   rxt.importTags()
 
@@ -31,7 +33,7 @@ Meteor.startup ->
             placeholder: 'What needs to be done?'
             autofocus: true
             keydown: (e) ->
-              if e.which == 13
+              if e.which is 13
                 TaskDB.insert
                   title: @val().trim()
                   isEditing: false
@@ -43,7 +45,7 @@ Meteor.startup ->
           }
         ]
         div bind ->
-          if tasks.length() == 0
+          if tasks.length() is 0
             []
           else
             [
@@ -71,7 +73,7 @@ Meteor.startup ->
                         autofocus: true
                         value: task.title
                         keyup: (e) ->
-                          if e.which == 13
+                          if e.which is 13
                             @blur()
                         blur: ->
                           TaskDB.update task._id, {$set: {isEditing: false, title: @val()}}
@@ -99,7 +101,7 @@ Meteor.startup ->
                 div [
                   span {id: 'todo-count'}, bind -> [
                     strong "#{incomplete()}"
-                    if incomplete() == 1 then ' item left' else ' items left'
+                    if incomplete() is 1 then ' item left' else ' items left'
                   ]
                   button {
                     id: 'clear-completed'

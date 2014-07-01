@@ -1,6 +1,7 @@
 {
   "packages": {
     "moment": {},
-    "reactive-coffee": {}
+    "reactive-coffee": {},
+    "bootstrap-3": {}
   }
 }
