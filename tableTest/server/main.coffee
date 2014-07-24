@@ -5,6 +5,9 @@ Meteor.publish "depsChannel" , ->
 
 share.adminLoggedIn = true
 
+class PComponent 
+	constructor:(@indx)->
+	ctname: 'ctname'
 
 		
 class THead 
@@ -13,8 +16,14 @@ class THead
 
 Meteor.startup -> 
 	unless share.theads.findOne()? # to initialize only once
-		
 		insertInto share.theads, new THead 1 
+
+getComponents = ->
+	PComponents.find().fetch() 
+
+addComponent = ->
+	insertInto share.theads, new PComponent getComponents().length + 1
+
 
 getHeads = ->
 	share.theads.find().fetch() 
@@ -28,7 +37,11 @@ delHead = (id)->
 upsHead = (obj)->
 	upsertWithId share.theads, obj
 
+addTable = -> #later I'll change following codes to use table object to remember it's elemements
+
 Meteor.methods
+	newTable: addTable
+	newComponent: addComponent
 	newHead: addHead
 	delHead: delHead
 	upsHead: upsHead

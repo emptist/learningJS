@@ -1,19 +1,17 @@
 <template name="main">
+	<header class="navbar" >
+		<div class="navbar-inner">
+			<a class="brand" href="/"> HOPE </a>
+		</div>
+	</header>
 
-<header class="navbar" >
-	<div class="navbar-inner">
-		<a class="brand" href="/"> HOPE </a>
-  		
+	<div class="container">
+		<h1>Table Builder</h1>
+		<div id="tables" class= "navbar" >
+			{{#each tables}}
+		  		{{> basicTable}}
+			{{/each}}
+		</div>
 	</div>
-</header>
-
-<div class="container">
-	<h1>Table Builder</h1>
-	<div id="tables" class= "navbar" >
-		{{#each tables}}
-	  		{{> basicTable}}
-		{{/each}}
-	</div>
-</div>
 </template>
 

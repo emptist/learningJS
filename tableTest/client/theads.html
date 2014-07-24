@@ -1,0 +1,52 @@
+<template name = 'theads'>
+	<tr>
+		{{#if editing}}
+			{{> editHeadsView}}
+	    {{else}}
+	        {{> headView}}
+		{{/if}}
+	</tr>
+</template>
+
+<template name = "editHeadsView">
+<div class="row">
+	{{#each theads}}
+		{{> editHeadView}}
+	{{/each}}
+	<th>
+		<div class="col-xs-12">
+			<div class="input-group">
+				<span class="input-group-btn" >
+			      	<button id="addHead" class="btn btn-info"> + </button>
+		    		<button id="saveHead" class="btn btn-warn"> Save </button>
+	    		</span>
+    		</div>
+		</div>  
+    </th>
+</div>
+</template>
+
+<template name = 'editHeadView'>
+	<th>
+		<div class="col-xs-12">
+			<div class="input-group">
+				<input type="text" class="form-control" id=""  value={{thname}} >
+				<span class="input-group-btn" >
+					<button class="btn btn-danger" id="delHead" > - </button>
+				</span>
+			</div>
+		</div>
+    </th>
+</template>
+
+<template name = "headView">
+	{{#each theads}}
+		<th>
+			{{thname}} 
+		</th>
+	{{/each}}
+	<th>
+	  <button id="editHead" class="btn btn-info"> Edit </button>
+	</th>
+</template>
+

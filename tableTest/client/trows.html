@@ -1,0 +1,102 @@
+<template name = 'theads'>
+	<tr>
+	{{#if editing}}
+		{{> editHeadsView}}
+    {{else}}
+        {{> headView}}
+	{{/if}}
+	</tr>
+</template>
+
+<template name = "editHeadsView">
+<div class="row">
+	{{#each theads}}
+		{{> editHeadView}}
+    
+	{{/each}}
+	<th>
+		<div class="col-xs-12">
+			<div class="input-group">
+				<span class="input-group-btn" >
+			      	<button id="addHead" class="btn btn-info"> + </button>
+		    		<button id="saveHead" class="btn btn-warn"> Save </button>
+	    		</span>
+    		</div>
+		</div>  
+    </th>
+</div>
+</template>
+
+<template name = 'editHeadView'>
+	<th>
+		<div class="col-xs-12">
+			<div class="input-group">
+				<input type="text" class="form-control" id=""  value={{thname}} >
+				<span class="input-group-btn" >
+					<button class="btn btn-danger" id="delHead" > - </button>
+				</span>
+			</div>
+		</div>
+    </th>
+</template>
+
+<template name = "headView">
+	{{#each theads}}
+		<th>
+			{{thname}} 
+		</th>
+	{{/each}}
+	<th>
+	  <button id="editHead" class="btn btn-info"> Edit </button>
+	</th>
+</template>
+
+<template name = "trows">
+	{{#each trows}}
+		<tr>
+			{{> trow}}
+		</tr>
+	{{/each}}
+	<button id="addDept" class="btn btn-info"> + </button>
+	
+</template>
+
+
+<template name = "trow">
+	{{#each tdatas}}
+		<input class="input-mini" type="text" id=""  value={{tdata}} >
+	{{/each}}
+	<td>
+		<input class="input-mini" type="text" id="deptname"  value={{deptname}} >
+	</td>
+	<td>
+		<input class="input-mini" type="text" id="ZaigangrENShu"  value= {{ZaigangrENShu}} >
+	</td>
+	<td>
+		<input class="input-mini" type="text" id="HuanSuanrENShu"  value={{HuanSuanrENShu}} >
+	</td>
+	<td>
+		<input class="input-mini" type="text" id="jixiaoFenshu"  value= {{jixiaoFenshu}} >
+	</td>
+	<td>
+		<input class="input-mini" type="text" id="jIEyU" value={{jIEyU}} >
+	</td>
+	<td>
+		<input class="input-mini" type="text" id="GuDingZIchan" value={{GuDingZIchan}} >
+	</td>
+	<td>
+		<input class="input-mini" type="text" id="CHAYiXiShu"  value={{CHAYiXiShu}} >
+	</td>
+	<td>
+		{{LishiXiShu}}
+		<!--input class="input-mini" type="text" id="LishiXiShu"  value={{LishiXiShu}} -->
+	</td>
+	<td>
+		<input class="input-mini" type="text" id="LishijiangJIN"  value={{LishijiangJIN}} >
+	</td>
+	<td>
+		<button id="removeDept" class="btn btn-danger"> - </button>
+	
+	</td>
+</template>
+

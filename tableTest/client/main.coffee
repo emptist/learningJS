@@ -11,11 +11,11 @@ theads = ->
 
 Template.main.helpers
 	tables: ->
-		[1..3 ]
+		[1]
 
 
 
-Template.editHeadView.helpers
+Template.editHeadsView.helpers
 	theads: ->
 		theads()
 
@@ -23,19 +23,20 @@ Template.basicTable.helpers
 	editing: ->
 		Session.get "editing"
 
-Template.editHeadView.events
+Template.editHeadsView.events
 	'click #addHead': (e,t) ->
 		Meteor.call "newHead"	
 	'click #delHead': (e,t) ->
 		Meteor.call "delHead", @_id
-
-	'click #saveHead': (e,t) ->
-		Session.set "editing", false
-
 	'keyup input': (e,t) ->
 		v =  e.target.value.trim() 
 		this.thname = v 
 		Meteor.call "upsHead", this # well are there any simpler approaches?
+
+Template.editHeadsView.events
+	'click #saveHead': (e,t) ->
+		Session.set "editing", false
+
 
 
 Template.headView.helpers
@@ -43,7 +44,6 @@ Template.headView.helpers
 		theads()
 
 Template.headView.events
-	
 	'click #editHead': (e,t) ->
 		Session.set "editing", true		
 
