@@ -2,3 +2,4 @@
 test/*.txt
 !test/master.txt
 *rebase*
+node_modules/*

@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/emptist/learningJS#readme",
   "dependencies": {
+    "express": "^4.13.3",
     "request": "^2.67.0"
   }
 }
