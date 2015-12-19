@@ -50,3 +50,17 @@
     data = fs.writeFile '止盈.log', "helllo world", (err)->
       console.log '不影響以下程序運行'
     console.log '我先運行'
+
+### 持續觀察文件變化 watch a file
+
+比如自選股文件 protofolio.txt 變化,及時跟進.
+
+    console.log """ 內容從:
+      #{(JSON.parse fs.readFileSync 'config.json').port}
+      """
+
+    fs.watch 'config.json', (current, previous)->
+      console.log """
+        變成了:
+        #{(JSON.parse fs.readFileSync 'config.json').port}
+        """
