@@ -18,16 +18,13 @@
         json: true
 
       # 回應: callback
-      callback = (出錯, 服務器複件, json)->
+
+      request 參數, (出錯, 服務器複件, json)->
+        作品集 = {}
         if not 出錯 and 服務器複件.statusCode is 200
           作品集 = ({name, description}=repo for repo in json)
 
-      回應 request 參數, callback
-
-    取作品集 用戶名, ->
-      console.log "#{用戶名} 共有 #{作品集.length} 個作品集"
-      console.log "#{作品集[0].description}"
-
+        回應 出錯,作品集
 
 在 Atom editor 中安裝了 Script 就可以用 command + i 來運行這個文件,結果會顯示在下面.
 
