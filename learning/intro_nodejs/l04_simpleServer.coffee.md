@@ -53,6 +53,6 @@ coffee simpleServer.coffee
 
     fs.watchFile "config.json", (現, 前)->
       {host, port} = JSON.parse fs.readFileSync "config.json"
-      server.close() # nesh dosn't close the old server?
+      server.close() 
       server.listen port, host, ->
         console.log "now listening #{host} : #{port}"
