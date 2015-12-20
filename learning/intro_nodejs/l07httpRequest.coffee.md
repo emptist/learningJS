@@ -8,9 +8,7 @@
     port: 1337
     path: "./config.json"
     method: "GET"
-    headers:
-      'User-Agent':'emptist'
-
+  
   request = http.request options, (response)->
     body = ''
     response.on "data", (chunk)-> # node split whole thing into chunks

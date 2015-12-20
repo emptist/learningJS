@@ -42,12 +42,12 @@
 ### 用順序執行方式寫文件
 
     console.log '順序執行程序方式'
-    data = fs.writeFileSync 'hello.txt', "helllo world"
+    data = fs.writeFileSync 'l03hello.txt', "helllo world"
 
 ### 用非順序執行方式寫文件
 
     console.log '順序執行程序方式, 例如記錄log而不影響止盈止損計算速度'
-    data = fs.writeFile '止盈.log', "helllo world", (err)->
+    data = fs.writeFile 'l03prog.log', "helllo world", (err)->
       console.log '不影響以下程序運行'
     console.log '我先運行'
 

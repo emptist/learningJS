@@ -1,6 +1,7 @@
 為了方便提供 github 所需要的 User-Agent header,經過搜索找到了
 [request 庫](https://www.npmjs.com/package/request).使用request
 就不再需要 https = require "https" 了
+注意在第8課,嘗試了用中文來寫,結果可以,但是debug有時顯示不了中文.
 
 
     request = require "request"

@@ -16,14 +16,10 @@ here is the original code that doesn't work any more.
         response.on "data", (chunk)->
           body += chunk.toString 'utf8'
         response.on "end", ->
-          repos = []
           json = JSON.parse body
-          for repo in json
-            repos.push
-              name: repo.name
-              description: repo.description
-
+          repos = ({name, description} for repo in json)
           callback repos
+          
       request.end()
 
     getRepos 'emptist', (repos)->

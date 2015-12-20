@@ -44,14 +44,14 @@ coffee simpleServer.coffee
 
     {host, port} = JSON.parse fs.readFileSync "config.json"
 
-讓服務器程序聽取該網址端口的請求:
+讓服務器程序聽取該網址端口的請求,先端口,後主機:
 
     server.listen port, host, ->
       console.log "now listening #{host} : #{port}"
 
 配置文件可以隨時改動,一旦改動則重啟服務器:
 
-    fs.watchFile "config.json", ->
+    fs.watchFile "config.json", (現, 前)->
       {host, port} = JSON.parse fs.readFileSync "config.json"
       server.close() # nesh dosn't close the old server?
       server.listen port, host, ->
