@@ -5,19 +5,25 @@
 
     request = require "request"
 
-    getRepos = (username='emptist')->
+    # callback: callback
+    callback = (err, response, json)->
+      if err
+        console.log "err#{err}"
+      else if not err and response.statusCode is 200
+        console.log json
+        repos = ({name, description} = repo for repo in json)
+        console.log "#{username} has #{repos.length} repos"
+        console.log "#{repos[0].description}"
+      else
+        console.log response.statusCode
+
+    getRepos = (username='emptist', callback)->
 
       options =
         url: "https://api.github.com/users/#{username}/repos"
         headers:
-          'User-Agent': 'emptist'
+          'User-Agent': username
         json: true
-
-      callback = (err, response, json)->
-        if not err and response.statusCode is 200
-          repos = ({name, description}=repo for repo in json)
-          console.log "#{username} has #{repos.length} repos"
-          console.log "#{repos[0].description}"
 
       request options, callback
 
