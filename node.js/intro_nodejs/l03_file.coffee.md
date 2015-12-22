@@ -9,7 +9,7 @@
 ### 非順序方式
 
     console.log '非順序執行程序方式, 用回應方案(callback function)來處理讀入的文件'
-    fs.readFile 'l03file.litcoffee', (err, data)->
+    fs.readFile 'l03_file.coffee.md', (err, data)->
       if err
         console.log '出錯了'
       else
@@ -24,7 +24,7 @@
 有時需要先讀取文件內容,下面的事情才好做,比如讀入配置文件:
 
     console.log '順序執行程序方式, 直接回報讀入的文件內容:'
-    data = fs.readFileSync 'l03file.litcoffee'
+    data = fs.readFileSync 'l03_file.coffee.md'
     console.log """
       #{data}
     """
