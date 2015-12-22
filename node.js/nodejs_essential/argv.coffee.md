@@ -3,7 +3,7 @@ process是一個全局變量
 
     console.log process.argv
 
-    grap = (flag)->
+    grab = (flag)->
       index = process.argv.indexOf flag
       if index is -1 then null else process.argv[index+1]
 
