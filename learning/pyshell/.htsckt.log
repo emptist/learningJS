@@ -1,0 +1,16 @@
+INFO:root:58:b0:35:a6:f6:2a
+INFO:root:192.168.0.104
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): service.htsc.com.cn
+WARNING:py.warnings:/Users/jk/anaconda/lib/python3.4/site-packages/requests/packages/urllib3/connectionpool.py:768: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.org/en/latest/security.html
+  InsecureRequestWarning)
+
+INFO:root:[('JSESSIONID', 'G5QgWzzCvyhrs1TP6m0pF0kvt1yWP0cdpZbqpnQLDkb9NmrQTKkQ!-1766720420'), ('SESSION_COOKIE', '71762')]
+INFO:requests.packages.urllib3.connectionpool:Resetting dropped connection: service.htsc.com.cn
+WARNING:py.warnings:/Users/jk/anaconda/lib/python3.4/site-packages/requests/packages/urllib3/connectionpool.py:768: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.org/en/latest/security.html
+  InsecureRequestWarning)
+
+WARNING:root:verify code is entered: 
+INFO:requests.packages.urllib3.connectionpool:Resetting dropped connection: service.htsc.com.cn
+WARNING:py.warnings:/Users/jk/anaconda/lib/python3.4/site-packages/requests/packages/urllib3/connectionpool.py:768: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.org/en/latest/security.html
+  InsecureRequestWarning)
+

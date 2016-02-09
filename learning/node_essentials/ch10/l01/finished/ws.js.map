@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "ws.js",
+  "sourceRoot": "",
+  "sources": [
+    "ws.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAA,GAAA,GAAU,IAAA,OAAA,CAAQ,IAAR,CAAa,CAAC,MAAd,CAAqB;IAAA,IAAA,EAAK,IAAL;GAArB;;EAEV,GAAG,CAAC,EAAJ,CAAO,YAAP,EAAoB,SAAC,EAAD;WAClB,EAAE,CAAC,IAAH,CAAQ,SAAR;EADkB,CAApB;AAFA"
+}
